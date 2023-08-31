@@ -44,7 +44,9 @@ public class UserService implements UserDetailsService {
 
     /*
      Obter o user logado - através do uso de um objeto do tipo Authentication no Contexto do Spring Security
-     Depois através do token do user autenticado, pelo Claim, que configurámos no AuthorizationServerConfig, conseguimos extrair o username
+     com o Jwt conseguimos chamar a partir dele um getPrincipal(), fazendo cast para o tipo Jwt, que contém os Claims (ver o AuthorizationServerConfig)
+     depois através do token do user autenticado, pelo Claim, conseguimos extrair o username
+     com o get() buscamos o objeto dentro do Optional (UserRepository)
     */
     protected User authenticated() {
         try {

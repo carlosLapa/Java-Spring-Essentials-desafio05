@@ -24,6 +24,7 @@ public class UserDTO {
         this.birthDate = birthDate;
     }
 
+    // no for - conseguimos percorrer a lista de roles quer da própria lista roles (definida acima), quer da lista collection getAuthorities, pois devolve a lista de roles tb
     public UserDTO(User entity) {
         id = entity.getId();
         name = entity.getName();
